@@ -1,0 +1,14 @@
+{
+  "domain": "mtviki_hdmi_matrix",
+  "name": "MT-ViKI HDMI Matrix",
+  "after_dependencies": ["frontend", "http"],
+  "codeowners": ["@millercentral"],
+  "config_flow": true,
+  "documentation": "https://github.com/millercentral/hass-mtviki-hdmi-matrix",
+  "integration_type": "device",
+  "iot_class": "local_push",
+  "issue_tracker": "https://github.com/millercentral/hass-mtviki-hdmi-matrix/issues",
+  "loggers": ["custom_components.mtviki_hdmi_matrix"],
+  "requirements": [],
+  "version": "0.1.0"
+}

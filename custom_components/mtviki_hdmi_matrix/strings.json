@@ -1,0 +1,61 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to the HDMI matrix",
+        "description": "Enter the IP address and TCP control port of your MT-ViKI HDMI matrix switcher.",
+        "data": {
+          "host": "IP address",
+          "port": "Control port"
+        },
+        "data_description": {
+          "host": "Give the switch a fixed address (DHCP reservation) so it does not change.",
+          "port": "The switch listens on TCP port 8080 by default."
+        }
+      },
+      "reconfigure": {
+        "title": "Change connection settings",
+        "data": {
+          "host": "IP address",
+          "port": "Control port"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not reach an MT-ViKI matrix at that address and port. Check the IP, the port, and that nothing else is holding the switch's control connection.",
+      "unknown": "Unexpected error; see the Home Assistant log."
+    },
+    "abort": {
+      "already_configured": "This switch is already set up.",
+      "reconfigure_successful": "Connection settings updated."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Input and output names",
+        "description": "Names are used for the output selectors, the buttons, and the matrix card.",
+        "data": {
+          "input_1_name": "Input 1",
+          "input_2_name": "Input 2",
+          "input_3_name": "Input 3",
+          "input_4_name": "Input 4",
+          "output_1_name": "Output 1",
+          "output_2_name": "Output 2"
+        }
+      }
+    },
+    "error": {
+      "duplicate_input_names": "Each input needs a different name.",
+      "reserved_input_name": "\"None\" is reserved for \"no signal\"; choose another input name."
+    }
+  },
+  "exceptions": {
+    "command_failed": {
+      "message": "The HDMI matrix did not accept the command: {error}"
+    },
+    "invalid_option": {
+      "message": "\"{option}\" is not an input on this matrix."
+    }
+  }
+}
